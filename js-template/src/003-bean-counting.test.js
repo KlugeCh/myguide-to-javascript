@@ -8,6 +8,10 @@
 
 let testString = 'Bouncing Bean Counting'; // -> result is 2 UpperCase 'B's
 
+const countChars = (str) => {
+  return countParam(str, 'B');
+};
+
 const countParam = (str, char) => {
   let counter = 0;
   for (let i = 0; i <= str.length; i++) {
@@ -15,10 +19,11 @@ const countParam = (str, char) => {
       counter++;
     }
   }
-
   return console.log(' ' + char + ' is  ' + counter + ' time in String : ' + testString);
 };
 
 countParam(testString, 'N');
 countParam(testString, 'B');
 countParam(testString, 'n');
+// counting only 'B', invoking countParams
+countChars(testString);
